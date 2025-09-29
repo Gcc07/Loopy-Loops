@@ -18,7 +18,7 @@ public class MenuRepitition {
 
     public static void main(String[] args) {
         String user_input = "";
-        while (!user_input.equals("3")) { // While input isn't three
+        do { // While input isn't three
             System.out.println("1: Say Hello \n2: Display Time\n3: Exit"); // UI questions
             user_input = getInput("Choice: "); // User input
             if (user_input.equals("1")) { // If input is 1:
@@ -28,7 +28,7 @@ public class MenuRepitition {
                 LocalDateTime time = LocalDateTime.now();
                 System.out.println(time);
             }
-        }
+        } while (!user_input.equals("3"));
         System.out.println("Exited.");
         
     }
